@@ -1,0 +1,344 @@
+/*Whole page
+*scroll smoothly
+*font family and color
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Forum;
+  background: white;
+  text-align: center;
+}
+
+.logo-pic {
+  margin: 0 auto;
+}
+
+.section {
+  margin: 0 auto;
+  width: auto;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 25px;
+}
+
+.h3 {
+  font-family: Forum;
+  padding: 2.5vh;
+  font-size: 30px;
+}
+
+.section-p {
+  padding: 1.5vw;
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Making header centered
+  *font family for header
+  *added background to header
+  */
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: Raleway;
+}
+
+.header-div {
+  padding: 3vh;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1vh;
+  list-style: none;
+}
+
+.nav-a {
+  font-family: Raleway;
+  text-decoration: none;
+  position: relative;
+  color: #232e2a;
+  font-size: 16px;
+}
+
+.nav-a::before {
+  content: "";
+  visibility: hidden;
+  transform: scaleX(0);
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #e9d2b1;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/*SECTION 1 BOXES/FORM
+  *change button sizes
+  *button color background
+  *box shadow and radius
+  *add transition/transform
+  *to scale when you hover
+  */
+
+#boxes {
+  background: #232e2a;
+  color: #232e2a;
+}
+
+#boxes-title {
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+#box-form-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5vw;
+}
+#boxes-div {
+  background: #e9d2b1;
+  width: 50%;
+  height: 500px;
+  line-height: 35px;
+  text-align: left;
+  color: white;
+  border-radius: 3px;
+}
+
+#form-div {
+  background: white;
+  width: 30%;
+  border-radius: 3px;
+}
+.button {
+  display: inline-block;
+  padding: 1vh 2.5vw;
+  background: #e9d2b1;
+  color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: gray 1px 1px 7px 0px;
+  transition: 500ms transform ease-in-out;
+  transform: scale(1);
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+/*SECTION 2 SERVICES*/
+
+#services {
+  background: #e9d2b1;
+  padding: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+#services-intro {
+  background: #232e2a;
+  color: white;
+  width: 80vw;
+  margin: 10px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+#services-squares-div {
+  display: flex;
+  justify-content: center;
+}
+
+h4 {
+  font-family: Raleway;
+  color: black;
+  font-size: 25px;
+  padding: 1.5vh;
+}
+
+.services-li {
+  color: white;
+  list-style-position: inside;
+  list-style-type: circle;
+  padding: 1vh;
+  text-align: center;
+}
+
+.section-div-services {
+  width: 25vw;
+}
+
+#services-button {
+  background: #232e2a;
+  color: white;
+  text-align: center;
+  margin: 3vh;
+  height: 6vh;
+  width: 15vw;
+}
+
+/*SECTION 3 ABOUT*/
+
+#about {
+  background: #232e2a;
+  padding: 5vh;
+}
+
+#about-div {
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.about-p {
+  background: white;
+  margin: 3vh;
+  padding: 3vh;
+  color: #232e2a;
+  text-align: left;
+  border-radius: 3px;
+}
+
+#about-list {
+  border-top: 1px #e9d2b1 solid;
+  list-style: none;
+  text-align: center;
+}
+
+#about-img {
+  max-height: 600px;
+  padding: 3vh;
+  margin: 3vh;
+}
+
+/*SECTION 4 REVIEWS*/
+
+#testimonials-div {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+#testimonials-title,
+#testimonials-subtitle {
+  color: #232e2a;
+}
+
+#reviews {
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.review-grid {
+  margin: 10px;
+}
+
+.testimonials-p {
+  background: #e9d2b1;
+  border-radius: 2px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 1px;
+  transition: 500ms transform ease-in-out;
+  transform: scale(1);
+}
+
+.testimonials-p:hover {
+  transform: scale(1.03);
+}
+
+/*SECTION 5 GALLERY*/
+#gallery {
+  background: #232e2a;
+  color: white;
+}
+
+#gallery-div {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.gallery-img {
+  min-height: 25vh;
+  max-height: 50vh;
+  min-width: 25vw;
+  max-width: 25vw;
+  opacity: 0.5;
+  transition: 0.5s ease-in-out;
+}
+
+.gallery-img:hover {
+  opacity: 1;
+}
+
+/*SECTION 6 CONTACT*/
+
+#contact {
+  background: #e9d2b1;
+  color: #232e2a;
+}
+
+#contact-title {
+  padding: 5vh;
+  border-bottom: 1px solid #232e2a;
+}
+
+#logo-div {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 80vw;
+  padding-top: 80px;
+}
+#contact-p {
+  color: white;
+  width: 30vw;
+}
+.contact-logo {
+  color: white;
+  transform: scale(1.5);
+  text-align: left;
+  height: 80px;
+}
+
+.contact-link {
+  color: #232e2a;
+}
+
+.contact-link:hover {
+  color: white;
+}
+
+.inline {
+  display: inline;
+}
+
+/*FOOTER*/
+
+.footer {
+  text-align: left;
+  color: #e9d2b1;
+}
